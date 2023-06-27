@@ -1,0 +1,23 @@
+#1 What is decoraterand give examples  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+decorater is a function it take a arguments as an function and adding some functionality or modifying return a oroginal  function without changing any code or behaviour its called decorater 
+Example :-
+
+def decora(fun):
+    def wrapper():
+        d = fun()
+        c = d.upper()
+        return c
+    return wrapper
+
+@decora
+def gree():
+    return "Subrat Mohanty"
+print(gree())
+
+OUTPUT : SUBRAT MOHANTY
+
+
+
+
