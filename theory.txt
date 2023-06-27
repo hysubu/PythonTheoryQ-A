@@ -19,5 +19,101 @@ print(gree())
 OUTPUT : SUBRAT MOHANTY
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+#Q2. What is Map() Function and Higher Order Function  Give Examples 
+
+Higher Order Function:- 
+
+->  Higher order Function  mean those function want argumenet as an  function or return a function 
+ its called Higher order Function 
+-> Example: Map() function 
+
+Map:-
+
+-> A Map function whenever we need to apply a paticular function in multiple items  those time we use Map() Function.
+-> A map Function return a list or tuple 
+-> The Benifit of using  Map function its change or modify every elements of list or tuple without Looping  or list comprehension  
+
+-> Example(1) :- 
+
+lst = ["Subrat", "Sagar", "Rajesh" , "Papu", "Silu"]
+l = (list(map(lambda x :x.upper(),lst)))
+print(l)
+# OutPut : ['SUBRAT', 'SAGAR', 'RAJESH', 'PAPU', 'SILU']
+
+->Example(2) : -
+ 
+def square(n):
+     n = n ** 2
+     return n 
+
+l = [12,3,4,5,6,7,8,8]
+res = list(map(square, l))
+print(res)
+
+Output : - [144, 9, 16, 25, 36, 49, 64, 64]
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q3. What is Lambda Function And Give Examples 
+
+-> lamnda function is a anonymous Function 
+-> Its define without any name 
+-> whenever we created using "lambda" keyword
+-> Its take a any number of arguments in one expression or one line 
+-> the lambda return a function not values 
+
+
+squer = lambda x :x**2
+print(type(squer))
+# <class 'function'>  It return A function 
+
+-> Examples : - 
+
+squer = lambda x :x**2
+print(squer(10)) 
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q4. What is reduce function give examples 
+
+-> reduce function is a  higher order function 
+-> It take argument two one is - function another list or tuple
+-> reduce function reduce the list and return a single number 
+
+-> Examples:-
+its a return maximum number:- 
+ 
+l = [12, 30, 400, 2, 45, 87]
+res = reduce(lambda x,y:x if x>y else y,l)
+print(res)
+print(type(res))
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q5. What is Filter Function give examples ?
+
+-> its a also higher order function 
+-> Its a built in funcion in python 	
+-> it take two arguments one is function and another is list or tuple or string
+-> the filter function is return a value whenever the condition is true
+
+-> Examples :- 
+l = [2,3,4,5,34,45,56,77]
+res = list(filter(lambda x : x > 3, l))
+print(res)
+  
+   
+
+
+
+
+
 
 
