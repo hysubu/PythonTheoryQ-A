@@ -108,6 +108,149 @@ print(type(res))
 l = [2,3,4,5,34,45,56,77]
 res = list(filter(lambda x : x > 3, l))
 print(res)
+
+Output : 120
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q6. What is generator in python ? 
+
+-> generator is aone type of special iterable which allow to  itrate over a sequence(list tuple etc) of values 
+   without storing them  all in memory  at once
+->generators are define using a function that contain the "Yield" keyword 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q7. What is Iteration ,  Iterator, in python with examples ?
+
+-> Iteration :- 
+	
+	-> Iteration is a gereral term for taking each item of somting  one after another
+	-> like we use anytime loop & while loop also.
+	-> The functionalty of loop is also itaration it take item one by one its called iteration.
+	-> Examples :
+	
+	l = [1,23, 4,5,5]
+	for i in l :
+    	print(i)
+
+	Output: 
+	1
+	23
+	4
+	5
+	5
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+->Iterator:- 
+	-> Iterators is a function that taking a element or item one by one and store it
+	-> its store in memory one by one like first one is come add some functionlaty and modify then showing 
+	-> it have 2 function 
+		-> Iter() : its return a object and creating a iterator 
+		-> next() : its retrive or showing iter object  
+	-> Iterators wajhse se iterations hota hai
+		
+	
+		-> Examples : 
+		a = ["apple", "banana", "orange", "coconut"]
+		itr = iter(a)
+		print(next(itr))
+		print(next(itr))
+		print(next(itr))  
+
+
+	->
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	import sys
+Check the iterator how much memory take it : 
+	a = range(1,1000000000)
+	print(sys.getsizeof(a))
+	Output : 48
+
+	l = [x for x in range(1,100)]
+	print(sys.getsizeof(l))
+	->the list is itarable and  we can make iteration  
+	->its not iterator because its cant store one by one in memory 
+
+	output : 920
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+-> Iterable : -
+ 
+	-> Iterable in a object which can iterate over 
+	-> it generate an iteraor whenever we pass iter() method.
+	-> all iterator is iterable  because we can use  looping  here 
+	-> all iterable is not iterator 
+
+-> How to check which is iterable or not ?
+	-> We can use iter() method then print the type and if its iterator then its true if its not then false
+
+	c = [10, 20 ,30, 40]
+	itr = iter(c)
+	print(type(itr))
+	Output : <class 'list_iterator'> Its a iterator
+	=>if we can use looping here then its iterators 
+	
+	a = 10
+	itr = iter(a)
+	print(type(itr))but its not iterator in python
+
+=> Method = 2
+
+->using Dir() method how to check iterable  or not
+->if it have __iter__ method then its  iterator  
+-> List, tuple , set, dictinory, string  is a iterable  but int is not 
+Example:1 
+print(dir(a))  it have not __iter__ method so its not iterable  
+# '__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__',
+Example2:-
+
+c = [10, 20 ,30, 40] 
+it have __iter__ method so its iterable 
+print(dir(c))
+# '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-> How to check a object is iterator or not ?
+	-> when we want to check a object iterator or not we can use dir() method 
+	-> after using dir() method  if insdie the method or obj have __iter__ or __next__ method so its a 	iterator if its not then its not iterator
+
+	-> Examples : - 
+	c = [10, 20, 30, 40]
+	itr = iter(c)
+	print(dir(itr))
+ 	Output:- __iter__,__next__ 
+
+
+
+  
+
+
+
+
+ 	
+
+	  
+
+
+ 
+
+
   
    
 
