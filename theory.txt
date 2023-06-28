@@ -117,7 +117,51 @@ Output : 120
 
 -> generator is aone type of special iterable which allow to  itrate over a sequence(list tuple etc) of values 
    without storing them  all in memory  at once
-->generators are define using a function that contain the "Yield" keyword 
+->generators are define using a function that contain the "yield" keyword 
+-> generators is a create a simple iterator 
+-> Generator is a function it have no return statement  its have "yield" statement 
+-> whenever we call a generator function it gives a geenerator Object  
+-> if we want the value of object the we use next() function and get the value one by one 
+-> the benifit is useing "yield" statement  its known this element or  item   pass in previous time , 
+wehenever we call again this  function its yield statement  execute where its pause 
+-> where we use generators 
+	-> Representing infinite data or folder 
+	-> memory efficient take a less memory a generator 
+	-
+
+=> difference is normal and generateor function is 
+whenever we call  normal function its permanently  close and removed the memory 
+or whenever we call a  generator function its temporarly pause and the known are previous variable or "yield" statement if we call second time a generator function its open or work where its pause 
+
+
+=> Examples Of generator :- 
+
+
+def generator():
+    yield "first statement"
+    yield "second statement"
+    yield "Third statement"
+
+gen = generator()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+# Output:
+# first statement
+# second statement
+# Third statement
+for i in gen :
+   print(i)
+
+ Output:
+# first statement
+# second statement
+# Third statement
+
+
+
+
+  
 
 
 
