@@ -280,9 +280,141 @@ print(dir(c))
 	print(dir(itr))
  	Output:- __iter__,__next__ 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#Q8.What is Python ? 
+
+-> Python is a general Porpose language and simple language
+-> We can use this language devlop different type of software 
+-> Its a object oriented interpreted programming Language 
 
 
-  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ #Q9. Difference between List and tuple  ?
+
+LIST 						TUPLE 
+-----------------------------------------------------
+-> List is collection of differentes types	-> Tuple is a collection of differents type of value
+ of value 
+
+-> List is a mutable it mean we can modifying  -> Tuple is a immutable data type we cant modifyng 
+
+-> List uses Squere "[ ]" bracket 		-> Tuple uses Parentesis "( )"
+
+->List consume More memory 			-> Tuple consume less memory 
+
+-> List have many function			-> Tuple have  less function like : count ,index
+like: extend , append , insert , remove
+update etc 
+-> Example : 					-> Example :
+
+-> import sys 					-> import sys
+
+li =  [12,34,44,44,44,33]				tup = (12,34,44,44,44,33)
+print(sys.getsizeof(li))				print(sys.getsizeof(tup))
+Output :  152						-> Output :- 88 
+			
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q10. What is difference between Local Variable and Global Variable ? 
+
+-> Local Variable 
+	-> Local mean when we define a variable inside the functon its called Local Variable.
+	-> Local variable acces only those function which funtions inside declare 
+	-> Example :  
+		-> def function():
+			variable = "local variable"
+			print(variable)
+		   function()
+				
+-> Global Variable: -
+	-> Global Variable mean which variable declare outside of function or scope its called Global Variable 
+	-> The Global variable acces any function in the programme
+	-> Example : 
+		-> variable = "Global variable"
+		-> def function()
+			print(variable)
+		  function()
+		
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q11.What is difference Between Deep and Shallow Copy ? 
+
+-> Deep Copy:-
+	-> In deep copy any changes made to a copy of object do not reflect in the Original object 
+	-> The original and copy id will be difference here 
+	-> the Adharcard xerox is black and white but origina is original  	
+
+-> Shallow Copy: - 
+	-> In case of shallow copy a reference of object 
+	-> It mean that any changes made to a copy it reflect o original object 
+
+Example Of Both: 
+
+import copy
+
+# Original list with nested objects
+original_list = [1, 2, [3, 4]]
+
+# Shallow copy
+shallow_copy = original_list.copy()
+
+# Deep copy
+deep_copy = copy.deepcopy(original_list)
+
+# Modify the nested list in original_list
+original_list[2][0] = 5
+
+print(original_list)    # [1, 2, [5, 4]]
+print(shallow_copy)     # [1, 2, [5, 4]]
+print(deep_copy)        # [1, 2, [3, 4]]
+
+		 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q12. What is Help() Function ? 
+
+-> Its a Built-in Python function 
+-> The help() function is a powerful tool for accessing documentation and understanding Python objects.
+-> If we need or want about any module or class that time we use help() function 
+
+-> Examples :- 
+	-> import copy   --- its a function 
+	-> print(help(copy))
+	-> Output :
+	Help on module copy:
+
+	NAME
+    		copy - Generic (shallow and deep) copying operations.
+
+	MODULE REFERENCE
+    		https://docs.python.org/3.10/library/copy.html
+    
+    	The following documentation is automatically generated from the Python
+
+
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q13. What is dir() Function ? 
+
+-> Its abuilt-in Function in python 
+-> The dir() function return all propoties and method of the specific object without values 
+-> It return all  dunder or magicmethod or methods related this module or function or object 
+-> Example:- 
+	import math 
+	-> print(dir(math))
+return this function
+	['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 
+	'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 
+	'lcm', 'ldexp', 'lgamma','log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'nextafter', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau',
+	 'trunc', 'ulp']
+
+
+
 
 
 
