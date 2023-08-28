@@ -19,6 +19,9 @@ print(gree())
 OUTPUT : SUBRAT MOHANTY
 
 
+-> the wrapper function that the actually  modify the behaviour of  fun its call fun() and its store in  d   
+
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -414,14 +417,294 @@ return this function
 	 'trunc', 'ulp']
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q14. What is difference between Stattically and Dynamically ? 
+
+
+-> Statically : - 
+
+	-> In statically typed languages, variables are bound to a specific type
+ 	during compilation and their types are checked at compile-time.
+	-> Example : int x = 5;
+		int y = "Hello"; 
+
+
+-> Dynamically : 
+	-> In dynamically typed languages, variables are not bound to a specific type during compilation.
+	 The type of a variable is determined at runtime based on the assigned value.
+
+	-> Type checking is performed during runtime, allowing variables to hold values
+	 of different types at different points in the program.
+	-> Examples : x = 5
+		     y = "Hello"  # No type declaration or checking
 
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+#Q15. What is recursion  ? 
+	
+	-> recursion Is a programming Technique  where a function call itself 
+ 
+	-> Example:- 
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+print(factorial(4))
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q16. What is Pickling and  Unpickling In python ?
+
+-> Pickling mean (serializer)  its convert the source or python data into byte stream typand save the file
+-> Flow : 
+	
+	"Pythondata:-------------------------" convert byte stream(dumpsmethod)"----------------file(dave)-- 
+
+-> Example : 	import pickle
+	data = {
+    	'name': 'John',
+    	'age': 30,
+    	'city': 'New York'
+	}
+-> Unpickling 
+
+-> Unpickling mean (deserializer) its convert the byte stream to Python source code  
+
+-> flow :
+	
+	file(data)--------------------- convert python code(loadmethod)------------------------"python data 
+-> Examples: 
+
+	-> with open('data.pickle', 'rb') as file:
+    	loaded_data = pickle.load(file) 
+	output : {'name': 'John', 'age': 30, 'city': 'New York'}
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q17.What is Slicing ? 
+
+-> a slicing is a techniqu it return a range of character 
+-> a slicing start with statrt position index
+-> by default its staart also starting index 
+-> it take a 3 arguments 
+	-> start , end , step 
+	-> start : shere we start 
+	-> end : which index levels we show 
+	-> step : its  gap between  character 
+-> Example : 
+	variable[start: end: step] 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q18. How to create File in a Python Source Code ? 
+
+-> f = open("create.py", "x")
+	print(f)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q19. How to remove or Delete python file in source code ? 
+
+-> import  os
+	rem = os.remove("create.py")
+	print(rem)
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q20. What is Set in python ?  
+
+	-> Set  is  onod=rder collection or unique items 
+	-> set is defines by value separeted by commas 
+	-> its use is flower bracket "{ }" 
+	-> how to create empty set    =>  set()
+	-> example: {1,2,3,4,5,6}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q21. What is dictinory in python ? 
+
+-> Python dectinory is a ordered collection of items 
+
+-> it store elements key,value pair
+ 
+-> here key is alway unique identifier
+
+-> its a mutable only value  we can change or midify  the value 
+
+-> Examples : {"key":"value" , "key2":"value"}
+ 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+					OOPS 
+
+#Q22. What is instance Variable ? 
+
+-> in python oops when we declare a variable/ value  inside a constructor of class (__init__) 
+
+-> this variable is different for differnt objects 
+
+-> Examples : 
+	-> class Employee:
+		def __init__(self, id, name)
+			self.name = name 
+			self.id = id    ---- Its a instance Variable 
+	obj = Employee(1, "subu")
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q23. What is class variable ? 
+
+-> Its declare alwaye outsude the all  class-function and inside the class 
+-> its declare below the class header 
+-> Class variables are accessed using the class name or any instance of the class.
+-> This variable / value is equal  for every object or instance  
+-> if  hthe value of class variable is modify it reflect for all instance 
+-> We can updete or modify using only class name 
+
+-> Example : class Car:
+    color = 'red'  # Class variable
+
+	car1 = Car()	
+	car2 = Car()
+
+print(car1.color)  # Output: red
+print(car2.color)  # Output: red
+
+Car.color = 'blue'  # Modifying class variable
+
+print(car1.color)  # Output: blue
+print(car2.color)  # Output: blue
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q24. What is difference between  function and method ? 
+
+Function						Method 
+
+-> Functions are blocks of code that perform a		-> Methods are functions that are defined within a class
+ specific task and can be called from anywhere		and operate on instances of that class (or the class itself).
+ in the program.
+
+-> They are defined outside of classes and can be   	-> They are associated with a specific object or 
+standalone or part of a module.				class and can access and modify instance or class variables.
+
+->Functions can have parameters (inputs) and 		-> Methods are called using the object or class instance 
+return values (outputs).				followed by the method name and parentheses.
+
+-> Functions are typically called using the function
+ name followed by parentheses.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Q25. Difference between Abstraction  and Encapsulation ? 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+	Abstraction 						Encapsulation 
+----------------------------------------------------------------------------------------------------------------------------------------
+-> Abstraction solves the problem in the design level       	 -> Encapsulation solve the problem in the implementation level 
+
+
+-> Abstraction is used for hidding the unwanted data 		 -> Encapsulation means hiding the code and data into a single unit 
+giving relevent data 						to protect the data from outside world 
+
+-> Abstarction lets you focus on what the object does 		-> Encapsulation meansa hiding the internal details or mechanics of how an 
+insted of how it does it.(ଅବଷ୍ଟାର୍କେସନ୍ ଆପଣଙ୍କୁ ବସ୍ତୁ କିପରି କରେ				object does somthing(ଏନକାପସୁଲେସନ୍ ଅର୍ଥ ହେଉଛି ଏକ ବସ୍ତୁ କିପରି କିଛି କରେ ତାହାର ଆଭ୍ୟନ୍ତରୀଣ ବିବରଣୀ କିମ୍ବା ଯାନ୍ତ୍ରିକତାକୁ ଲୁଚାଇଥାଏ) 									 
+ତାହା ଉପରେ ଧ୍ୟାନ ଦେବାକୁ ଦିଏ )				
+
+
+-> Abstraction :- Outer layout used in terms of design 		-> inner layout used in terms of implementation
+
+-> Examples :							-> Example : 
+Outer look of mobile phone like it has a display			inner implementation detail of a mobile phone , how keyword button and display screen are  
+screen and keypad buttons to dial a number 				connect with each other using circuits 
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+
+Q26. What Method Overloading ? 
+
+	-> Method Overloading is a consept in object -oriented-programming  where a class  can have 
+	muliple methods with same name but different parameter lists 
+	-> Python has not sopperted Method overloading 
+	-> but we can using defauly keyword parameter to create Overloading or using also conditions 
+
+
+-> Exmaples :
+
+
+class Calculator:
+    def add(self, a, b=0):
+        return a + b
+
+    def multiply(self, a, b=1):
+        return a * b
+
+calc = Calculator()
+print(calc.add(5))       # Output: 5
+print(calc.add(5, 3))    # Output: 8
+
+print(calc.multiply(5))  # Output: 5
+print(calc.multiply(5, 3))  # Output: 15
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  	
+ Q27. What is Method Overriding ? 
 
+
+ Method overriding is a fundamental concept in object-oriented programming, where a subclass provides a specific implementation
+ for a method that is already defined in its superclass. The overridden method in the subclass has the same name,
+ return type, and parameters as the method in the superclass.
 	  
+
+-> Examples : 
+class Animal:
+    def speak(self):
+        return "Animal speaks"
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+# Instantiate objects
+animal = Animal()
+dog = Dog()
+cat = Cat()
+
+# Method calls
+print(animal.speak())  # Output: Animal speaks
+print(dog.speak())     # Output: Woof!
+print(cat.speak())     # Output: Meow!
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
  
